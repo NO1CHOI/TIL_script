@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1 | JS</title>
+    <script src="./scripts/dom1.js" defer ></script>
+    <style>
+        ul li {padding:10px;}
+    </style>
+</head>
+<body>
+    <h1>DOM 이벤트</h1>
+    <h2>마우스 이벤트</h2>
+    <ul>
+        <li><button type="button" id="buyBtn" style="background-color:lightpink;" onclick="userOrderMsg()">주문하기</button></li>
+        <li><button type="button" id="payBtn" style="background-color: lightblue;" onmousemove ="userPayMsg()">결제하기</button></li>
+        <li><button type="button" id="idBtn" style="background-color:khaki;" onclick="userId()">아이디중복확인</button></li>
+        <li>키보드 이벤트</li>
+        <li><input type="text" placeholder="리뷰를 입력하세요." name="user_review" onkeydown="revuew50Msg()"></li>
+        <li><input type="text" placeholder="ID" name="user_id" onfocus="focusblue()" onblur="blurblue()"></li>
+        <li><input type="password" placeholder="Pw" name="user_pw" onkeydown="userIfPw()"></li>
+        <li><input type="number" placeholder="수량을 입력하세요" name="item_num" value="1" onfocus="focusNum()" onblur="blurNum()"></li>
+        <li></li>
+    </ul>
+    <h1>이벤트와 콜백함수</h1>
+    <dl>
+        <dt>회원가입</dt>
+        <dd><a href="#" class="google_join">구글아이디로 가입하기</a></dd>
+        <dd>위 a태그 클릭시 구글 주소가 새창으로 뜨는 알고리즘</dd>
+        <dt>가입복습</dt>
+        <dd><a href="#" class="naver_join">네이버 가입하기</a></dd>
+        <dd><a href="#" class="kakao_join">카카오 가입하기</a></dd>
+        <dt>현재 페이지 변경방법</dt>
+        <dd><a href="#" class="file_link">5/20 파일보기</a></dd>
+        <dd><a href="#" class="index_link">index.html 파일보기</a></dd>
+        <dd><a href="#" class="readme_link">readme.html파일보기</a></dd>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+    <form action="#" method="get">
+        <button type="button" id="num_btn_minus">-</button>
+        <input type="number" name="num">
+        <button type="button" id="num_btn">+</button>
+        <button type="button" id="num_btn_reset">reset</button>
+    </form>
+</body>
+</html>
