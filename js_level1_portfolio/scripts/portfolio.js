@@ -21,7 +21,15 @@ thumbNailA[0].addEventListener('click',function(){
     popupShow(); // 팝업출력함수 호출
     popupBg.children[0].children[0].src = this.children[0].src
 })
-thumbNailA[1].addEventListener('click',popupShow)
+thumbNailA[1].addEventListener('click',function(){
+    console.log(1); // 작동테스트
+    console.log(this); // 이벤트객체자동인식 하는지 확인
+    console.log(this.children[0].src); // 내가 누른 자식의 src
+    console.log(popupBg.children[0].children[0].src); // 팝업 bg의 자식의 자식의 src 확인
+    popupShow(); // 팝업출력함수 호출
+    popupBg.children[0].children[0].src = this.children[0].src
+})
+// thumbNailA[1].addEventListener('click',popupShow)
 thumbNailA[2].addEventListener('click',popupShow)
 thumbNailA[3].addEventListener('click',popupShow)
 thumbNailA[4].addEventListener('click',popupShow)
