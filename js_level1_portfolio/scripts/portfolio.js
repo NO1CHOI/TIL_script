@@ -14,32 +14,47 @@ console.log(popupBg, thumbNailA);
 popupBg.style.display = 'none';
 //변수로 만든 DOM 요소가 여러개일경우 이벤트를 위해 접근할때는 인덱스를 사용해 하나씩 개별접근해야한다.
 thumbNailA[0].addEventListener('click',function(){
-    console.log(0); // 작동테스트
-    console.log(this); // 이벤트객체자동인식 하는지 확인
-    console.log(this.children[0].src); // 내가 누른 자식의 src
-    console.log(popupBg.children[0].children[0].src); // 팝업 bg의 자식의 자식의 src 확인
-    popupShow(); // 팝업출력함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src
+    popupShow(this); // 팝업호출함수
+    // console.log(0); // 작동테스트
+    // console.log(this); // 이벤트객체자동인식 하는지 확인
+    // console.log(this.children[0].src); // 내가 누른 자식의 src
+    // console.log(popupBg.children[0].children[0].src); // 팝업 bg의 자식의 자식의 src 확인
+    // popupBg.children[0].children[0].src = this.children[0].src
+    // popupShow();
 })
 thumbNailA[1].addEventListener('click',function(){
-    console.log(1); // 작동테스트
-    console.log(this); // 이벤트객체자동인식 하는지 확인
-    console.log(this.children[0].src); // 내가 누른 자식의 src
-    console.log(popupBg.children[0].children[0].src); // 팝업 bg의 자식의 자식의 src 확인
-    popupShow(); // 팝업출력함수 호출
-    popupBg.children[0].children[0].src = this.children[0].src
+    popupShow(this); // 팝업호출함수
 })
 // thumbNailA[1].addEventListener('click',popupShow)
-thumbNailA[2].addEventListener('click',popupShow)
-thumbNailA[3].addEventListener('click',popupShow)
-thumbNailA[4].addEventListener('click',popupShow)
-thumbNailA[5].addEventListener('click',popupShow)
-thumbNailA[6].addEventListener('click',popupShow)
-thumbNailA[7].addEventListener('click',popupShow)
-thumbNailA[8].addEventListener('click',popupShow)
+thumbNailA[2].addEventListener('click',function(){
+    popupShow(this); // 팝업호출함수
+})
+thumbNailA[3].addEventListener('click',function(){
+    popupShow(this); // 팝업호출함수
+})
+thumbNailA[4].addEventListener('click',function(){
+    popupShow(this); // 팝업호출함수
+})
+thumbNailA[5].addEventListener('click',function(){
+    popupShow(this); // 팝업호출함수
+})
+thumbNailA[6].addEventListener('click',function(){
+    popupShow(this); // 팝업호출함수
+})
+thumbNailA[7].addEventListener('click',function(){
+    popupShow(this); // 팝업호출함수
+})
+thumbNailA[8].addEventListener('click',function(){
+    popupShow(this); // 팝업호출함수
 
-function popupShow(){
-    return popupBg.style.display = 'flex';
+})
+
+function popupShow(target){
+    console.log('------------------함수시작위치와 에러체크')
+    //console.log(popupBg.children[0].children[0]); // 정상체크
+    popupBg.style.display = 'flex';
+    popupBg.children[0].children[0].src = target.children[0].src;
+    return; // 함수종료
 }
 
 //배경 클릭 시 팝업 숨기기
