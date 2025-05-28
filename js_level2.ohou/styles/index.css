@@ -1,0 +1,101 @@
+/* =========== 메인 */
+main {
+    background: lightblue;
+    width:995px; margin:0 auto;
+}
+main .path {margin-bottom: 26px;}
+main  section {
+    display:grid;
+    grid-template-columns: 630px 341px;
+    justify-content: space-between;
+}
+/* --------------왼쪽 썸네일 */
+main  section .left_thumnail {
+    background-color: tomato;
+    height: 559px;
+    display:flex;
+    flex-flow: row nowrap;
+}
+main  section .left_thumnail .small {}
+main  section .left_thumnail .small a {
+    width: 56px; height: 56px;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+main  section .left_thumnail .small a img {width: 100%;}
+main  section .left_thumnail .big {
+    width: calc(100% - (56px + 15px));
+    background-color: yellow;
+    margin-left:15px;
+}
+main  section .left_thumnail .big img {width: 100%;}
+/* --------------오른쪽 주문창 */
+main section .right_order {background-color: lightcoral;}
+main section .right_order > * {margin-bottom:25px;background-color:lightsalmon;}
+main section .right_order p {}
+main section .right_order h1 {}
+/* ----------- 오른쪽 리뷰 */
+main section .right_order .review {}
+main section .right_order .review .score {}
+main section .right_order .review .score em {}
+main section .right_order .review .num {}
+main section .right_order .sale_price {}
+main section .right_order .sale_price em {}
+main section .right_order .sale_price del {}
+main section .right_order > .price {}
+main section .right_order > .price em {}
+/* ------------------------- 가격 혜택  */
+main section .right_order .benefit_delivery {
+    overflow: hidden;
+}
+main section .right_order .benefit_delivery dt {
+    width: 80px; background: greenyellow;
+    float: left;
+}
+main section .right_order .benefit_delivery dd{
+    width: calc(100% - 80px); background: lightseagreen;
+    float: right;
+}
+main section .right_order .benefit_delivery dd em {}
+/* ------------------ 주문 디테일  */
+main section .right_order .product_option {
+    display: flex;
+    flex-flow:column nowrap;
+}
+main section .right_order .product_option > * {
+    padding:10px;
+    border:1px solid #aaa;
+    border-radius: 5px;
+    padding-left:17px;
+}
+main section .right_order .product_option select:focus {outline: none;}
+main section .right_order .product_option select[name=color] {margin-bottom:20px;}
+main section .right_order .product_option select[name=color] option {}
+main section .right_order .product_option select[name=size] {}
+main section .right_order .product_option select[name=size] option {}
+/* -------------------------총금액 */
+main section .right_order .total {}
+main section .right_order .total > p {}
+main section .right_order .total .price {}
+main section .right_order .total .price em {}
+main section .right_order .btn_group {
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+}
+main section .right_order .btn_group * {
+    width:236px; height: 57px;
+    border-radius: 5px;
+    font-size: 1.063rem;
+}
+main section .right_order .btn_group #cart_btn {
+    color: #59AFFF;
+    border:1px solid  #59AFFF;
+    background-color: #fff;
+}
+main section .right_order .btn_group #buy_btn {
+    color:#fff;
+    background-color: #59AFFF;
+}
