@@ -1,0 +1,57 @@
+main {
+    width: 500px; height: 800px;
+    margin: 0 auto;
+    padding:20px;
+    background-color: #0E3C76;
+}
+main h1 {
+    color:#fff;
+    font-size: 2rem; font-weight: 800;text-align: center; padding: 20px 0;}
+main ul {
+    background-color: #0E3C76;
+    height:550px;
+    overflow-y: scroll;
+    margin: 10px 0;
+}
+main ul li {
+    background-color: #fff;
+    line-height: 60px;
+    margin:10px;
+    padding:0 20px;
+    border-radius: 50px;
+    position: relative;
+}
+main ul li span {color: #333;}
+main ul li .del_btn {
+    /* background-color: lightcoral; */
+    padding:10px;
+    border: 2px solid #0E3C76;
+    border-radius: 50px;
+    position: absolute;
+    right: 20px;
+    top:12px;
+    color:#0E3C76 ;
+}
+main .input_btn {
+    /* background-color: violet; */text-align: center;
+} 
+main .input_btn .to {
+    background-color: #0E3C76;
+    text-align: center;
+    width: 100%;
+    padding:10px 0;
+    border-bottom: 2px solid #fff;
+    color:#fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+} 
+main .input_btn #to_btn {
+    color:#0E3C76;
+    background-color: #fff;
+    width: 300px;
+    height: 50px;
+    margin-top:30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+} 

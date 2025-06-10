@@ -1,0 +1,16 @@
+main {
+    background-color: wheat;
+    width: 500px;
+    height: 600px;
+    margin:0 auto;
+}
+main .photo {
+    background-color: aqua;
+}
+main .photo img {width: 100%;}
+main p {
+    padding:10px;
+    font-size: 1.25rem;font-weight: 600;text-align: center;
+}
+main p em {text-decoration : underline;}
+main p span {text-decoration : underline;}
