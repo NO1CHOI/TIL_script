@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="stylesheet" href="../task_birthday_flower/styles/reset.css">
+    <style>
+        .slide_wrap {
+            width: 400px;
+            overflow: hidden;
+        }
+        .slide_wrap .slide_container {
+            display: flex;
+            /* flex-flow:row-reverse;  반대로 하고싶을 경우 3 2 1 순서*/
+            width: max-content;
+            /* widht:1200px (가능) */
+            /* widht:calc(400px*3) */
+            transform: translateX(-0px);
+            /* 
+            0 = 400*0
+            400 = 400*1
+            800 = 400+2
+            */
+        }
+        .slide_wrap .slide_container .slide {
+            width:400px; height: 300px; width; font-size: 5rem;
+        }
+        .slide_wrap .slide_container .slide1 {background-color: lightcoral;}
+        .slide_wrap .slide_container .slide2 {background-color: lightblue;}
+        .slide_wrap .slide_container .slide3 {background-color: lightgoldenrodyellow;}
+        .slide_wrap .slide_container .slide4 {background-color: lightseagreen;}
+    </style>
+    <script src="./scripts/timer_2.js" defer></script>
+</head>
+<body>
+    <!-- 슬라이드 작성 규칙 -->
+    <!-- 슬라이드 전체 그룹 (개별슬라이드부모(개별슬라이드*다수)) -->
+    <div class="slide_wrap"><!-- 전체 슬라이드 그룹 (보이는 영역)-->
+        <div class="slide_container"> <!-- 개별슬라이드부모 (이동) -->
+            <div class="slide slide1">1</div> <!-- 개별슬라이드 -->
+            <div class="slide slide2">2</div>
+            <div class="slide slide3">3</div>
+            <div class="slide slide4">4</div>
+        </div>
+    </div>
+</body>
+</html>
