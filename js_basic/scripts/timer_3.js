@@ -18,7 +18,21 @@ for(let i=0;i<7;i++){
 }
 
 // 슬라이드 애니메이션 추가(타이머함수 활용)
-const slideContainer = document.querySelector('.slide_container')
+const slideContainer = document.querySelectorAll('.slide_container')
 console.log(slideContainer)
 
+let num = 0;
 /* 1920 / 4 = 480px */
+// 0 = 480* 0
+// 480 = 480*1
+// 960 = 480*2
+// ... 이렇게 이동한다
+const productTimer = setInterval(()=>{
+    //12345012345012345...
+    num++
+    if(num>5){num=0};
+    for(let i of slideContainer){
+        i.style.transform = `translateX(-${num*480}px)`
+    }
+    console.log(num)
+},500)
